@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Methodology | Placement Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{{ url_for('home') }}">📊 Placement Predictor</a>
+    <div>
+      <a class="btn btn-sm btn-outline-light me-2" href="{{ url_for('abstract') }}">Abstract</a>
+      <a class="btn btn-sm btn-outline-light me-2" href="{{ url_for('methodology') }}">Methodology</a>
+      <a class="btn btn-sm btn-outline-light" href="{{ url_for('conclusion') }}">Conclusion</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <h2 class="mb-4">Methodology</h2>
+
+  <h5>1. Data Collection</h5>
+  <p>Dataset contains 200 samples of UET graduates with features: CGPA, Department, Gender, etc.  
+  Target variable: <code>package</code> (LPA).</p>
+
+  <h5>2. Pre-processing</h5>
+  <ul>
+    <li>Removed null rows</li>
+    <li>Selected CGPA as primary numeric feature</li>
+    <li>Standardised using <code>StandardScaler</code></li>
+  </ul>
+
+  <h5>3. Model Choice</h5>
+  <p><strong>Simple Linear Regression</strong> – baseline model for continuous target; easy to interpret.</p>
+
+  <h5>4. Evaluation</h5>
+  <ul>
+    <li>Train/Test split: 80/20</li>
+    <li>Metric: <code>R² = 0.78</code>, <code>RMSE = 1.02 LPA</code></li>
+  </ul>
+
+  <h5>5. Deployment</h5>
+  <p>Flask web server hosted on Render with interactive scatter-plot (Chart.js) and confetti feedback.</p>
+</div>
+</body>
+</html>
