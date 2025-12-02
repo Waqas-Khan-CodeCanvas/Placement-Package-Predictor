@@ -1,0 +1,109 @@
+/* body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card {
+    border-radius: 1rem;
+}
+.gradient-text {
+    background: -webkit-linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* seconed version  */
+/* --- global --- */
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* --- hero / calculator --- */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.calculator-wrapper {
+    max-width: 420px;
+}
+#cgpaInput {
+    font-size: 1.5rem;
+    text-align: center;
+}
+#result .alert {
+    border-radius: 1rem;
+}
+
+/* --- chart --- */
+.chart-section {
+    background: #111;
+    color: #fff;
+}
+.chart-box {
+    height: 400px;
+    max-width: 800px;
+}
+
+/* --- footer --- */
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- tiny animation --- */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* ---- type-writer ---- */
+#typeWriter { font-size: 1.2em; }
+.cursor     { animation: blink .8s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---- punch-line ---- */
+.punch-line { font-family: 'Comic Neue', cursive; letter-spacing: .5px; }
+
+/* ---- confetti ---- */
+.confetti {
+  position: fixed; width: 12px; height: 12px; background: #f00;
+  position: absolute;
+  animation: confetti-fall 3s linear forwards;
+  border-radius: 50%;
+}
+@keyframes confetti-fall {
+  0%   { transform: translateY(-20vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
+}
